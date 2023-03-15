@@ -46,8 +46,7 @@ SRC			=	ft_atoi.c \
 				\
 				get_next_line/get_next_line.c \
 				get_next_line/get_next_line_utils.c \
-
-BONUS		=	$(SRC) \
+				\
 				ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
 				ft_lstsize_bonus.c \
@@ -58,7 +57,6 @@ BONUS		=	$(SRC) \
 				ft_lstiter_bonus.c \
 				ft_lstmap_bonus.c
 
-BONUS_OBJ	=	$(BONUS:.c=.o)
 OBJ			=	$(SRC:.c=.o)
 HEADER		=	libft.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 
@@ -67,17 +65,13 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@ar -crs $(NAME) $(OBJ)
 
-%.o : %.c $(HEADER)
-	@$(COMPILE) -c $< -o $@ 
-
-bonus : $(BONUS_OBJ)
-	@ar -crs $(NAME) $^
+%.o : $(SRC)/%.c $(HEADER)
+	@$(COMPILE) -c -I $(HEADER) $< -o $@
 
 re: fclean all
 
 clean :
 	@rm -rf $(OBJ)
-	@rm -rf $(BONUS_OBJ)
 
 fclean : clean
 	@rm -f $(NAME)
