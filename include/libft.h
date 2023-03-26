@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/10 13:35:19 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/20 12:23:57 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 13:35:19 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/03/26 19:28:09 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,40 @@
 
 # include<stdlib.h>
 # include<unistd.h>
+# include <fcntl.h>
+# include <limits.h>
+# include <stdarg.h>
+# include <string.h>
+
+# if BUFFER_SIZE < 1
+#  undef BUFFER_SIZE
+# endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10000
+# endif
+
+int		ft_printf(const char *s, ...);
+int		print_hex_up(va_list args);
+int		print_hex_low(va_list args);
+int		print_putchar(int c);
+int		print_char(va_list args);
+int		print_putstr(va_list args);
+int		print_ptr(va_list args);
+int		print_di(va_list args);
+void	ft_putnbr(long n);
+int		lower_hex(unsigned long address);
+int		upper_hex(unsigned long address);
+int		print_uns(va_list args);
+int		print_per(va_list args);
+
+char	*get_next_line(int fd);
+char	*obtain_line(char *buff, char *line);
+int		find_char(char *s, char c);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	update(char *buff);
+void	*ft_memset(void *s, int c, size_t n);
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
