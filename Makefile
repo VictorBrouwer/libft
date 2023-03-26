@@ -4,7 +4,7 @@ CC			=	gcc
 FLAGS		=	-Wall -Werror -Wextra
 COMPILE		=	$(CC) $(FLAGS)
 
-SRC			=	ft_atoi.c \
+SRC			:=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_isalnum.c \
@@ -39,13 +39,13 @@ SRC			=	ft_atoi.c \
 				ft_tolower.c \
 				ft_toupper.c \
 				\
-				ft_printf/ft_printf.c \
-				ft_printf/helpers.c \
-				ft_printf/hex_helpers.c \
-				ft_printf/num_helpers.c \
+				ft_printf.c \
+				helpers.c \
+				hex_helpers.c \
+				num_helpers.c \
 				\
-				get_next_line/get_next_line.c \
-				get_next_line/get_next_line_utils.c \
+				get_next_line.c \
+				get_next_line_utils.c \
 				\
 				ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
@@ -57,16 +57,31 @@ SRC			=	ft_atoi.c \
 				ft_lstiter_bonus.c \
 				ft_lstmap_bonus.c
 
-OBJ			=	$(SRC:.c=.o)
-HEADER		=	libft.h ft_printf/ft_printf.h get_next_line/get_next_line.h
+OBJ			:=	$(SRC:%.c=$(OBJ_DIR)/%.o)
+DEP			:=	$(OBJ:%.o=%.d)
+HEADER		:=	-I libft.h \
+				-I ft_printf \
+				-I get_next_line
+
+-include $(DEP)
+
+echo:
+	@echo $(OBJ)
+	echo
+	@echo $(SRC)
+	echo
+	@echo $(DEP)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ_DIR) $(OBJ)
 	@ar -crs $(NAME) $(OBJ)
 
-%.o : $(SRC)/%.c $(HEADER)
-	@$(COMPILE) -c -I $(HEADER) $< -o $@
+$(OBJ_DIR):
+	@mkdir -p $(@)
+
+$(OBJ_DIR)/%.o : %.c
+	@$(COMPILE) -MMD $(HEADER) -c $< -o $@
 
 re: fclean all
 
@@ -75,3 +90,5 @@ clean :
 
 fclean : clean
 	@rm -f $(NAME)
+
+.DEFAULT_GOAL := all
