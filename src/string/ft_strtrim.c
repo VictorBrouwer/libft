@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_strtrim.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/12 11:15:34 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/31 10:52:06 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/12 11:15:34 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/05/24 09:32:49 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
-	while (ft_strchr(set, s1[start]) != 0 && start < (size_t)ft_strlen(s1))
+	while (ft_strchr(set, s1[start]) != 0 && start < end)
 		start++;
 	while (ft_strchr(set, s1[end]) != 0 && start < end)
 		end--;
