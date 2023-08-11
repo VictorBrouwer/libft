@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/04 13:50:01 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/20 12:09:53 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/04 13:50:01 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/08/11 11:36:28 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

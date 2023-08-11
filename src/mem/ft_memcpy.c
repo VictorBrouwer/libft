@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/05 13:54:04 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/13 12:47:13 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/05 13:54:04 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/08/11 11:36:28 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

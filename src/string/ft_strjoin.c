@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/11 18:56:05 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/21 17:13:06 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/11 18:56:05 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/08/11 11:36:28 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

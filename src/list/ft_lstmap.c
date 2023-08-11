@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_lstmap_bonus.c                                  :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: vbrouwer <vbrouwer@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/18 16:46:33 by vbrouwer      #+#    #+#                 */
-/*   Updated: 2022/10/21 16:55:11 by vbrouwer      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/18 16:46:33 by vbrouwer          #+#    #+#             */
+/*   Updated: 2023/08/11 11:36:28 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
