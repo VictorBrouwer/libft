@@ -6,7 +6,7 @@
 /*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:15:54 by vbrouwer          #+#    #+#             */
-/*   Updated: 2022/12/09 11:15:38 by vbrouwer         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:09:11 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	int			bytes_read;
 
-	if (fd < 0 || fd > OPEN_MAX || read(fd, buff, 0) == -1)
+	if (fd < 0 || read(fd, buff, 0) == -1)
 		return (ft_memset(buff, 0, 1), NULL);
 	line = ft_calloc(sizeof(char), 1);
 	if (*buff)
