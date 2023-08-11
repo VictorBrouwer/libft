@@ -6,7 +6,7 @@
 /*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 12:07:14 by vbrouwer          #+#    #+#             */
-/*   Updated: 2023/08/11 11:36:28 by vbrouwer         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:13:09 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	int		x;
 	char	*res;
 
+	if (!s1)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	res = malloc((s1_len + 1) * sizeof(char));
 	if (!res)
