@@ -6,7 +6,7 @@
 /*   By: vbrouwer <vbrouwer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:24:22 by vbrouwer          #+#    #+#             */
-/*   Updated: 2023/08/15 11:22:13 by vbrouwer         ###   ########.fr       */
+/*   Updated: 2023/08/15 11:47:09 by vbrouwer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] && i < (dstsize - 1) && dstsize != 0)
 	{
-			dst[i] = src[i];
-			i++;
+		dst[i] = src[i];
+		i++;
 	}
 	if (dstsize)
 		dst[i] = 0;
